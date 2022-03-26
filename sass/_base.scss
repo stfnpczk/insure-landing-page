@@ -1,0 +1,41 @@
+$grayish-blue: #96A9C6;
+$dark-violet:#2D2641;
+$grayish-violet: #837D88;
+$v-dark-violet: #2C2830;
+$light-gray: hsl(0, 0%, 98%);
+
+$black: #2C2830;
+$white: #FFFFFF;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+
+body {
+    min-height: 100vh;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+h1, h2 ,h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: 'DM Serif Display', serif;
+
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+    height: auto;
+  }
+
+
+$tablet: 768px;
+$desktop: 1440px;
