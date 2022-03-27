@@ -5,13 +5,17 @@
   
   
 /*----------------------------
-      ??? section
+      header section
 ----------------------------*/
-  
-  
-  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 24px;
+}
+
+
 /*----------------------------
-      footer section 
+    footer section 
 ----------------------------*/
-  
-  
+
