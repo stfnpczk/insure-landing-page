@@ -1,9 +1,7 @@
 /*----------------------------
       layout
  ----------------------------*/
-  
-  
-  
+
 /*----------------------------
       header section
 ----------------------------*/
@@ -11,11 +9,47 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 24px;
+  margin: 20px 24px 24px;
 }
 
+/*----------------------------
+      hero section 
+----------------------------*/
+.hero {
+  background-color: $dark-violet;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 93px 26px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__heading {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.6666666865348816px;
+  }
+
+  &__paragraph {
+    margin: 16px 0 32px;
+    // max-width: 327px;
+  }
+
+  &__button {
+    border: 1.5px solid #ffffff;
+    padding: 11px 27px;
+    font-family: Karla;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+}
 
 /*----------------------------
-    footer section 
+      footer section 
 ----------------------------*/
-
