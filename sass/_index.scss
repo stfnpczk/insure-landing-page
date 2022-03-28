@@ -71,9 +71,6 @@
     margin: 40px 0 80px;
   }
 
-  
-  
-
   &__feature {
     display: flex;
     flex-direction: column;
@@ -100,6 +97,27 @@
 /*----------------------------
       cta section 
 ----------------------------*/
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  background-color: #2d2641;
+  padding: 72px 0;
+  margin: 0 24px 140px;
+  color: $white;
+
+  &__heading {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.5555555820465088px;
+    text-align: center;
+  }
+
+  &__button {
+    padding: 11px 22px;
+  }
+}
 
 /*----------------------------
       footer section 
