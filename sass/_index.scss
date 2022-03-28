@@ -40,15 +40,66 @@
 
   &__button {
     border: 1.5px solid #ffffff;
-    padding: 11px 27px;
-    font-family: Karla;
     font-size: 13px;
-    font-weight: 700;
     line-height: 15px;
+    font-weight: 700;
     letter-spacing: 1.5px;
-    text-align: center;
+    padding: 11px 27px;
   }
 }
+
+/*----------------------------
+      features section 
+----------------------------*/
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 125px 24px 84px;
+
+  &__transition {
+    border: none;
+    border-top: 1px solid #c396c6;
+    width: 150px;
+  }
+
+  &__heading {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.6666666865348816px;
+    margin: 40px 0 80px;
+  }
+
+  
+  
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image-container {
+    width: 86px;
+    text-align: center;
+  }
+
+  &__subheading {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.3888888955116272px;
+    margin: 32px 0 16px;
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin: 0 0 56px;
+  }
+}
+/*----------------------------
+      cta section 
+----------------------------*/
 
 /*----------------------------
       footer section 
