@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+
     <div class="page-wrapper">
       <header class="header">
         <a class="header__logo" href="#">
@@ -18,8 +19,18 @@
         <button class="header__hamburger" aria-label="open navigation menu">
           <img src="./images/icon-hamburger.svg" alt="" />
         </button>
+        <nav class="header__navigation">
+          <ul class="header__nav-items"> 
+            <li class="header__nav-item"> <a href="#">HOW WE WORK</a> </li>
+            <li class="header__nav-item"> <a href="#">BLOG</a> </li>
+            <li class="header__nav-item"> <a href="#">ACCOUNT</a> </li>
+            <li class="header__nav-item header__nav-item--button"> <a href="#">VIEW PLANS</a> </li>
+          </ul>
+        </nav>
       </header>
+
       <main>
+      
         <section class="hero">
           <picture>
             <source
@@ -42,11 +53,12 @@
             <a  href="#" class="hero__button">VIEW PLANS</a>
           </div>
         </section>
+
         <section class="features">
           <hr class="features__transition">
           <h2 class="features__heading">We're different</h2>
-          
           <div class="features__container">
+        
             <div class="features__feature">
               <div class="features__image-container">
                 <img src="./images/icon-snappy-process.svg" alt="">

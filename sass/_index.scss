@@ -10,6 +10,45 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px 24px 24px;
+
+  @media only screen and (min-width: $desktop) {
+    margin: 20px 168px;
+  }
+
+  &__hamburger {
+    @media only screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media only screen and (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  &__nav-items {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  &__nav-item {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+
+  &__nav-item--button {
+    // background: #2c2830;
+    border: 1.5px solid #2C2830;
+    // color: $white;
+    padding: 11px 26.65px;
+  }
 }
 
 /*----------------------------
@@ -171,6 +210,4 @@
     padding: 0 0 16px;
     color: $dark-violet;
   }
-
- 
 }
