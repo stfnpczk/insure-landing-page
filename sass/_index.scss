@@ -45,7 +45,7 @@
 
   &__nav-item--button {
     // background: #2c2830;
-    border: 1.5px solid #2C2830;
+    border: 1.5px solid #2c2830;
     // color: $white;
     padding: 11px 26.65px;
   }
@@ -57,6 +57,14 @@
 .hero {
   background-color: $dark-violet;
 
+  @media only screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 165px;
+    gap: 15px;
+    // position: relative;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
@@ -64,17 +72,46 @@
     padding: 93px 26px;
     text-align: center;
     color: $white;
+
+    @media only screen and (min-width: $desktop) {
+      flex: 1 1 50%;
+      padding: 169px 0 127px;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  &__image {
+    @media only screen and (min-width: $desktop) {
+      position: relative;
+      top: 105px;
+    }
   }
 
   &__heading {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -0.6666666865348816px;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 72px;
+      line-height: 64px;
+      letter-spacing: -1px;
+
+      span {
+        display: block;
+      }
+
+    }
   }
 
   &__paragraph {
-    margin: 16px 0 32px;
+    margin: 16px 15px 32px 0;
     // max-width: 327px;
+
+    @media only screen and (min-width: $desktop) {
+      margin: 27px 15px 32px 0;
+    }
   }
 
   &__button {
