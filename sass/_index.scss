@@ -258,6 +258,11 @@
 
 .footer {
   padding: 88px 0;
+  background-color: #FAFAFA;
+
+  @media only screen and (min-width: $desktop) {
+    padding: 64px 165px ;
+  }
 
   &__container {
     // margin: 0 auto;
@@ -265,6 +270,12 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__social-media {
@@ -276,7 +287,11 @@
   &__transition {
     border: none;
     border-top: 1px solid #dadada;
-    margin: 37px 24px 40px;
+    margin: 29px 24px 40px;
+
+    @media only screen and (min-width: $desktop) {
+      margin: 36px 0 48px;
+    }
   }
 
   &__navigation {
@@ -285,6 +300,13 @@
     // align-items: center;
     text-align: center;
     gap: 40px;
+
+    @media only screen and (min-width: $desktop) {
+      flex-direction: row;
+      // justify-content: space-between;
+      text-align: left;
+      gap: 170px;
+    }
   }
 
   &__nav-label {
