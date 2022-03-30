@@ -40,6 +40,10 @@ img {
     cursor: pointer;
 }
 
+hr {
+    margin-block: 0;
+    margin-inline: unset;
+}
 
 $tablet: 768px;
 $desktop: 1024px;
