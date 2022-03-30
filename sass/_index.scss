@@ -146,7 +146,7 @@
 
   @media only screen and (min-width: $desktop) {
     align-items: flex-start;
-    margin: 305px 165px 158px;
+    margin: 305px 165px 103px;
   }
 
   &__transition {
@@ -225,11 +225,26 @@
   margin: 0 24px 140px;
   color: $white;
 
+  @media only screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 69px 81px;
+    margin: 0 165px 150px;
+  }
+
   &__heading {
     font-size: 40px;
     line-height: 40px;
     letter-spacing: -0.5555555820465088px;
     text-align: center;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 56px;
+      line-height: 56px;
+      letter-spacing: -0.7777777910232544px;
+      text-align: left;
+      max-width: 475px;
+    }
   }
 
   &__button {
