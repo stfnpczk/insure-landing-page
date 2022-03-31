@@ -290,7 +290,7 @@
     margin: 29px 24px 40px;
 
     @media only screen and (min-width: $desktop) {
-      margin: 36px 0 48px;
+      margin: 28px 0 48px;
     }
   }
 
@@ -303,9 +303,15 @@
 
     @media only screen and (min-width: $desktop) {
       flex-direction: row;
-      // justify-content: space-between;
+      justify-content: space-between;
       text-align: left;
-      gap: 170px;
+      gap: 30px;
+    }
+  }
+
+  &__nav-items {
+    @media only screen and (min-width: $desktop) {
+      width: 255px;
     }
   }
 
