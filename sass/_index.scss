@@ -22,32 +22,64 @@
   }
 
   &__navigation {
-    display: none;
+    // display: none;
+    display: block;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #2c2830;
+    color: $white;
+    height: 587px;
+    height: 100vh;
+    padding: 40px 0 0;
 
     @media only screen and (min-width: $desktop) {
+      all: unset;
       display: block;
+      //
     }
   }
 
   &__nav-items {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 26px;
+
+    @media only screen and (min-width: $desktop) {
+      flex-direction: row;
+      gap: 26px;
+    }
   }
 
   &__nav-item {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 15px;
-    letter-spacing: 1.5px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.3636363744735718px;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 1.5px;
+    }
   }
 
   &__nav-item--button {
+    border: 1.5px solid $white;
+    padding: 11px 0;
+    // padding: 11px 100px;
+    width: 86.4%;
+    @media only screen and (min-width: $desktop) {
+      width: unset;
+      padding: 11px 26.65px;
+      border-color: #2c2830;
+    }
     // background: #2c2830;
-    border: 1.5px solid #2c2830;
     // color: $white;
-    padding: 11px 26.65px;
   }
 }
 
@@ -258,10 +290,10 @@
 
 .footer {
   padding: 88px 0;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 
   @media only screen and (min-width: $desktop) {
-    padding: 64px 165px ;
+    padding: 64px 165px;
   }
 
   &__container {
