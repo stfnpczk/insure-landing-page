@@ -8,6 +8,7 @@
     <title>Frontend Mentor | Insure landing page</title>
 
     <link rel="stylesheet" href="css/main.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
 
@@ -16,10 +17,11 @@
         <a class="header__logo" href="#">
           <img src="./images/logo.svg" alt="" />
         </a>
-        <button class="header__hamburger" aria-label="open navigation menu">
-          <img src="./images/icon-hamburger.svg" alt="" />
+        <button class="header__hamburger" id="hamburger" aria-label="open navigation menu">
+          <!-- <img src="./images/icon-hamburger.svg" alt="" /> -->
+          <span class="header__hamburger-icon"></span>
         </button>
-        <nav class="header__navigation">
+        <nav class="header__navigation" id="modal">
           <ul class="header__nav-items"> 
             <li class="header__nav-item"> <a href="#">HOW WE WORK</a> </li>
             <li class="header__nav-item"> <a href="#">BLOG</a> </li>

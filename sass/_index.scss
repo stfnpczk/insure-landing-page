@@ -16,14 +16,58 @@
   }
 
   &__hamburger {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    border: 1.5px solid #2C2830 ;
+    padding: 10px 6px;
+
     @media only screen and (min-width: $desktop) {
       display: none;
     }
   }
 
-  &__navigation {
-    // display: none;
+  &__hamburger-icon,
+  &__hamburger-icon:before,
+  &__hamburger-icon:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 16px;
+    background: black;
+    transition: all 0.4s ease;
     display: block;
+  }
+
+  &__hamburger-icon {
+    top: 13px;
+  }
+
+  &__hamburger-icon:before {
+    top: -5px;
+  }
+
+  &__hamburger-icon:after {
+    top: 5px;
+  }
+
+  &__hamburger-active &__hamburger-icon {
+    transform: rotate(-135deg);
+  }
+
+  &__hamburger-active &__hamburger-icon:before,
+  &__hamburger-active &__hamburger-icon:after {
+    top: 0;
+  }
+
+  &__hamburger-active &__hamburger-icon:before {
+    transform: rotate(90deg);
+  }
+
+
+
+  &__navigation {
+    display: none;
     position: absolute;
     top: 76px;
     left: 0;
@@ -35,11 +79,16 @@
     height: 100vh;
     padding: 40px 0 0;
 
+
     @media only screen and (min-width: $desktop) {
       all: unset;
       display: block;
       //
     }
+  }
+
+  &__navigation-open {
+    display: block;
   }
 
   &__nav-items {
@@ -78,8 +127,6 @@
       padding: 11px 26.65px;
       border-color: #2c2830;
     }
-    // background: #2c2830;
-    // color: $white;
   }
 }
 
@@ -103,8 +150,6 @@
     @media only screen and (min-width: $desktop) {
       display: block;
       width: 150px;
-      // margin-inline-start: inherit;
-      // margin-block-start: 0;
       margin-block-end: 63px;
     }
   }
@@ -150,7 +195,6 @@
 
   &__paragraph {
     margin: 16px 15px 32px 0;
-    // max-width: 327px;
 
     @media only screen and (min-width: $desktop) {
       margin: 27px 15px 32px 0;
