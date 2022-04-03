@@ -1,6 +1,54 @@
 /*----------------------------
       layout
  ----------------------------*/
+// background-images
+
+main {
+  @media only screen and (min-width: $desktop) {
+    background: url(../images/bg-pattern-intro-right-desktop.svg) no-repeat;
+    background-position: top -83px right;
+    z-index: 1;
+  }
+}
+
+.hero {
+  position: relative;
+
+  @media only screen and (min-width: $desktop) {
+    z-index: -1;
+  }
+}
+
+.hero__text {
+  background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat;
+
+  @media only screen and (min-width: $desktop) {
+    background: unset;
+  }
+}
+
+.hero__text::before {
+  @media only screen and (min-width: $desktop) {
+    content: url(../images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -312px;
+  }
+}
+
+.hero__text::after {
+  content: url(../images/bg-pattern-intro-right-mobile.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: -180px;
+
+  @media only screen and (min-width: $desktop) {
+    content: none;
+
+  }
+}
 
 /*----------------------------
       header section
@@ -19,7 +67,7 @@
     width: 32px;
     height: 32px;
     position: relative;
-    border: 1.5px solid #2C2830 ;
+    border: 1.5px solid #2c2830;
     padding: 10px 6px;
 
     @media only screen and (min-width: $desktop) {
@@ -64,8 +112,6 @@
     transform: rotate(90deg);
   }
 
-
-
   &__navigation {
     display: none;
     position: absolute;
@@ -78,7 +124,7 @@
     height: 587px;
     height: 100vh;
     padding: 40px 0 0;
-
+    transition: 0.3s ease-in;
 
     @media only screen and (min-width: $desktop) {
       all: unset;
@@ -88,7 +134,18 @@
   }
 
   &__navigation-open {
+    animation: modal-slide-in 1s ease-in;
     display: block;
+    z-index: 1;
+  }
+
+  @keyframes modal-slide-in {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
   }
 
   &__nav-items {
@@ -109,12 +166,17 @@
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 1.3636363744735718px;
+    color: #837D88 ;
 
     @media only screen and (min-width: $desktop) {
       font-size: 13px;
       line-height: 15px;
       letter-spacing: 1.5px;
     }
+  }
+
+  &__nav-item:hover {
+    color: #2C2830;
   }
 
   &__nav-item--button {
@@ -296,8 +358,10 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  background-color: #2d2641;
-  padding: 72px 0;
+  background: url(../images/bg-pattern-how-we-work-mobile.svg) no-repeat,
+    $dark-violet;
+  background-position: top right;
+  padding: 72px 24px;
   margin: 0 24px 140px;
   color: $white;
 
@@ -306,6 +370,8 @@
     justify-content: space-between;
     padding: 69px 81px;
     margin: 0 165px 150px;
+    background: url(../images/bg-pattern-how-we-work-desktop.svg) no-repeat, $dark-violet;
+    background-position: top right ;
   }
 
   &__heading {
@@ -334,10 +400,11 @@
 
 .footer {
   padding: 88px 0;
-  background-color: #fafafa;
+  background: url(../images/bg-pattern-footer-mobile.svg) no-repeat, #fafafa;
 
   @media only screen and (min-width: $desktop) {
     padding: 64px 165px;
+    background: url(../images/bg-pattern-footer-desktop.svg) no-repeat, #fafafa;
   }
 
   &__container {
