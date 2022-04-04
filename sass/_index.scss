@@ -46,7 +46,6 @@ main {
 
   @media only screen and (min-width: $desktop) {
     content: none;
-
   }
 }
 
@@ -67,7 +66,7 @@ main {
     width: 32px;
     height: 32px;
     position: relative;
-    border: 1.5px solid #2c2830;
+    border: 1.5px solid $v-dark-violet;
     padding: 10px 6px;
 
     @media only screen and (min-width: $desktop) {
@@ -119,7 +118,7 @@ main {
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: #2c2830;
+    background-color: $v-dark-violet;
     color: $white;
     height: 587px;
     height: 100vh;
@@ -166,29 +165,51 @@ main {
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 1.3636363744735718px;
-    color: #837D88 ;
+    color: $white;
 
     @media only screen and (min-width: $desktop) {
       font-size: 13px;
       line-height: 15px;
       letter-spacing: 1.5px;
+      color: #837d88;
     }
   }
 
   &__nav-item:hover {
-    color: #2C2830;
+    @media only screen and (min-width: $desktop) {
+      color: $v-dark-violet;
+    }
   }
 
-  &__nav-item--button {
+  &__nav-item-button {
     border: 1.5px solid $white;
-    padding: 11px 0;
-    // padding: 11px 100px;
-    width: 86.4%;
+    padding: 11px 80px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.3636363744735718px;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 1.5px;
+      color: $v-dark-violet;
+      padding: 11px 0px; //?
+    }
+
     @media only screen and (min-width: $desktop) {
       width: unset;
       padding: 11px 26.65px;
-      border-color: #2c2830;
+      border-color: $v-dark-violet;
     }
+  }
+
+  &__nav-item-button:hover {
+    // @media only screen and (min-width: $desktop) {
+    // }
+    color: $white;
+    background-color: $v-dark-violet;
   }
 }
 
@@ -270,8 +291,16 @@ main {
     font-weight: 700;
     letter-spacing: 1.5px;
     padding: 11px 27px;
+    cursor: pointer;
+    background-color: transparent;
   }
+
 }
+.hero__button:hover {
+  color: $v-dark-violet;
+  background-color: $white;
+}
+
 
 /*----------------------------
       features section 
@@ -370,8 +399,9 @@ main {
     justify-content: space-between;
     padding: 69px 81px;
     margin: 0 165px 150px;
-    background: url(../images/bg-pattern-how-we-work-desktop.svg) no-repeat, $dark-violet;
-    background-position: top right ;
+    background: url(../images/bg-pattern-how-we-work-desktop.svg) no-repeat,
+      $dark-violet;
+    background-position: top right;
   }
 
   &__heading {
@@ -427,6 +457,10 @@ main {
     gap: 16px;
   }
 
+  a:hover &__icon {
+    fill: $v-dark-violet;
+  }
+
   &__transition {
     border: none;
     border-top: 1px solid #dadada;
@@ -475,4 +509,5 @@ main {
     padding: 0 0 16px;
     color: $dark-violet;
   }
+
 }
